@@ -1,4 +1,4 @@
-
+var deque = require('deque');
 
 module.exports.loop = function () {
     for (var name in Memory.creeps) {
