@@ -12,7 +12,7 @@ var roleAtkHelper = {
         if (Game.time % 30 == 18) creep.say("through!");
         if (Game.time % 30 == 19) creep.say("Thanks!");
         if (Game.time % 30 == 20) creep.say(":)");
-        //var cT = creep.pos.findClosestByRange(FIND_HOSTILE_CREEPS); 
+        //var cT = creep.pos.findClosestByRange(FIND_HOSTILE_CREEPS);
        // if (cT) if (creep.attack(cT) == ERR_NOT_IN_RANGE) creep.moveTo(cT);
         //return;
         if (creep.room.name!=cl.ROOM) {
@@ -21,6 +21,6 @@ var roleAtkHelper = {
         }
         creep.moveTo(45, 20);
 	}
-};  
+};
 
 module.exports = roleAtkHelper;
