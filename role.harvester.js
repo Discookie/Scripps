@@ -46,7 +46,7 @@ var roleHarvester = {
                             creep.moveTo(targets[0]);
                         }
                     } else {
-                        if (creep.memory.id % 2) {
+                        if ((creep.memory.id >> 1) % 2) {
                             roleUpgrader.run(creep);
                             //console.log('nope');
                         } else {
