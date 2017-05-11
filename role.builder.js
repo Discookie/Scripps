@@ -58,9 +58,9 @@ var roleBuilder = {
             var sources = creep.room.find(FIND_SOURCES, {
                 filter: (source) => (source.energy > 0)
             });
-            var ret = creep.harvest(sources[creep.memory.id % sources.length]);
+            var ret = creep.harvest(sources[((creep.memory.id*2/3)>>0) % sources.length]);
             if (ret == ERR_NOT_IN_RANGE) {
-                creep.moveTo(sources[creep.memory.id % sources.length]);
+                creep.moveTo(sources[((creep.memory.id*2/3)>>0) % sources.length]);
             }
         }
     }
