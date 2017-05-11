@@ -9,6 +9,8 @@ var roleHarvester = {
 
         if (creep.memory.harvesting && creep.carry.energy == creep.carryCapacity) {
             creep.memory.harvesting = false;
+            creep.moveTo(Game.flags.Flag1);
+            return;
         }
         if (!creep.memory.harvesting && creep.carry.energy == 0) {
             creep.memory.harvesting = true;

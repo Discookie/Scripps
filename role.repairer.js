@@ -10,6 +10,8 @@ var roleRepairer = {
 	    }
 	    if(!creep.memory.working && creep.carry.energy == creep.carryCapacity) {
 	        creep.memory.working = true;
+            creep.moveTo(Game.flags.Flag1);
+            return;
 	    }
 
 	    if(creep.memory.working) {
