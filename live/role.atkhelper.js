@@ -1,4 +1,5 @@
 var _ = require('lodash');
+var cl = require('constlib');
 var ml = require('methodlib');
 var roleUpgrader = require('role.upgrader');
 var roleAtkHelper = {
@@ -14,7 +15,7 @@ var roleAtkHelper = {
         //var cT = creep.pos.findClosestByRange(FIND_HOSTILE_CREEPS); 
        // if (cT) if (creep.attack(cT) == ERR_NOT_IN_RANGE) creep.moveTo(cT);
         //return;
-        if (creep.room.name!="W19S35") {
+        if (creep.room.name!=cl.ROOM) {
             creep.moveTo(0, 16);
             return;
         }
