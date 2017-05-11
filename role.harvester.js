@@ -19,9 +19,9 @@ var roleHarvester = {
             var sources = creep.room.find(FIND_SOURCES, {
                 filter: (source) => (source.energy > 0)
             });
-            var ret = creep.harvest(sources[((creep.memory.id*2/3)>>0) % sources.length]);
+            var ret = creep.harvest(sources[((creep.memory.id*2/3)>>0 + 1) % sources.length]);
             if (ret == ERR_NOT_IN_RANGE) {
-                creep.moveTo(sources[((creep.memory.id*2/3)>>0) % sources.length]);
+                creep.moveTo(sources[((creep.memory.id*2/3)>>0 + 1) % sources.length]);
             }
         } else {
             var targets = creep.room.find(FIND_STRUCTURES, {
