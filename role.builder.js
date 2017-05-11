@@ -9,8 +9,8 @@ var roleBuilder = {
             creep.memory.building = false;
         }
         if (!creep.memory.building && creep.carry.energy == creep.carryCapacity) {
-            creep.memory.building = true;
-            creep.moveTo(Game.flags.Flag1);
+            if (!creep.moveTo(Game.flags.Flag1))
+                creep.memory.building = true;
             return;
         }
 

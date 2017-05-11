@@ -8,8 +8,8 @@ var roleHarvester = {
     run: function (creep) {
 
         if (creep.memory.harvesting && creep.carry.energy == creep.carryCapacity) {
-            creep.memory.harvesting = false;
-            creep.moveTo(Game.flags.Flag1);
+            if (!creep.moveTo(Game.flags.Flag1))
+                creep.memory.harvesting = false;
             return;
         }
         if (!creep.memory.harvesting && creep.carry.energy == 0) {
