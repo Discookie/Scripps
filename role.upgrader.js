@@ -8,6 +8,8 @@ var roleUpgrader = {
         }
         if (!creep.memory.upgrading && creep.carry.energy == creep.carryCapacity) {
             creep.memory.upgrading = true;
+            creep.moveTo(Game.flags.Flag1);
+            return;
         }
 
 
